@@ -33,7 +33,7 @@ const Settings = () => {
 
       // Retrieve and log the stored data to confirm it's saved
       const storedData = localStorage.getItem('submit');
-      console.log('Data in LocalStorage:', JSON.parse(storedData)); 
+     
       // By this way we can send data to the API by path which provide by the backend developer
       postData("/path",values)
     },
