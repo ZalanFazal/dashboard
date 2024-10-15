@@ -1,4 +1,3 @@
-// Sidebar.jsx
 import { Link } from "react-router-dom";
 import { List, ListItem, ListItemIcon, ListItemText, Divider, Typography } from "@mui/material";
 import DashboardIcon from "@mui/icons-material/Dashboard";
@@ -8,7 +7,7 @@ import SettingsIcon from "@mui/icons-material/Settings";
 // import Products from "../../pages/Products";
 const Sidebar = () => {
   return (
-    <div style={{ width: '250px', backgroundColor: '#2E3B55', height: '100vh', padding: '16px', color: '#ffffff',}}>
+    <div style={{ width: '250px', backgroundColor: '#2E3B55',  padding: '16px', color: '#ffffff', height:'100vh'}}>
       <Typography variant="h6" style={{ marginBottom: '20px', textAlign: 'center' }}>
         MY APPLICATION
       </Typography>
