@@ -46,16 +46,8 @@ const Layout = () => {
 
         <div style={{ padding: '20px', height: 'calc(100vh - 64px)', overflow: 'auto' }}>
           <Outlet /> {/* This will render the matched child route */}
-
-          {/* Pagination Component */}
-          <div className='pagination-container'>
-            <Pagination
-              count={10} // Total number of pages (replace with your data count)
-              page={page}
-              onChange={handlePageChange}
-              color="primary"
-            />
-          </div>
+{/* pagination */}
+          
         </div>
       </div>
     </div>

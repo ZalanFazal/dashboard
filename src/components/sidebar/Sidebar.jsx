@@ -42,12 +42,13 @@ const Sidebar = () => {
         </ListItem>
       </List>
       
-      <ListItem button component={Link} to="/products" style={{ '&:hover': { backgroundColor: '#3F51B5' } }}>
+      <ListItem button component={Link} to="/filtermethod" style={{ '&:hover': { backgroundColor: '#3F51B5' } }}>
           <ListItemIcon style={{ color: '#ffffff' }}>
             <ReportIcon />
           </ListItemIcon>
-          <ListItemText primary="Products" style={{ color: '#ffffff' }} />
+          <ListItemText primary="filtermethod" style={{ color: '#ffffff' }} />
         </ListItem>
+        
     </div>
   );
 };

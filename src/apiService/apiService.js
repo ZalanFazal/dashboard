@@ -24,6 +24,8 @@ apiClient.interceptors.request.use((config) => {
   return Promise.reject(error);
 });
 
+
+
 // Function to handle GET requests
 const get = async (url, params = {}, config = {}) => {
   try {
