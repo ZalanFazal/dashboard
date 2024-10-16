@@ -1,0 +1,18 @@
+/* index.css or global.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Optional: ensures padding and border are included in width/height */
+  }
+
+  /* lay.css */
+.pagination-container {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+  }
+  

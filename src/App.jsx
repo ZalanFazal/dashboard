@@ -1,4 +1,3 @@
-// App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/Layout'; // Ensure the path is correct
@@ -9,19 +8,21 @@ import Settings from './pages/Settings';
 import Products from './pages/Products';
 import Login from './pages/Login';
 
-
 const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path='/login' element={<Login/>}/>
-        <Route path="/" element={<Navigate to="/dashboard" />} /> {/* Redirect from root to /dashboard */}
+        <Route path='/login' element={<Login />} />
+        
+        {/* Redirect from root to /dashboard */}
         <Route path="/" element={<Layout />}>
-        <Route path="dashboard" element={<Dashboard />} />
+          <Route index element={<Navigate to="/dashboard" replace />} /> {/* Redirect to /dashboard */}
+          <Route path="dashboard" element={<Dashboard />} />
           <Route path="inventory" element={<Inventory />} />
           <Route path="reports" element={<Reports />} />
           <Route path="settings" element={<Settings />} />
           <Route path="products" element={<Products />} />
+          <Route path="settings" element={<Settings/>} />
 
         </Route>
       </Routes>

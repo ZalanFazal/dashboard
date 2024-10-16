@@ -2,7 +2,7 @@ import React from 'react';
 import { Typography, Paper, Grid, TextField, Button } from '@mui/material';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { postData } from '../apiService/api';
+// import { postData } from '../apiService/api';
 
 // Validation schema using Yup
 const validationSchema = Yup.object({
@@ -14,7 +14,7 @@ const validationSchema = Yup.object({
     .required('Email is required'),
   password: Yup.string()
     .min(8, 'Password should be at least 8 characters long')
-    .required('Password is required')
+    .required('Password is required'),
 });
 
 const Settings = () => {
@@ -22,20 +22,19 @@ const Settings = () => {
     initialValues: {
       name: '',
       email: '',
-      password: ''
+      password: '',
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
-      // Handle form submission
-      // console.log('Form Data Submitted:', values);
-      // Example: Save to local storage
+      // Save to local storage
       localStorage.setItem('submit', JSON.stringify(values));
 
       // Retrieve and log the stored data to confirm it's saved
       const storedData = localStorage.getItem('submit');
-     
-      // By this way we can send data to the API by path which provide by the backend developer
-      postData("/path",values)
+      // console.log('Stored Data:', storedData);
+
+      // Optionally, send data to the API (uncomment when ready)
+      // postData("/path", values);
     },
   });
 
@@ -55,7 +54,6 @@ const Settings = () => {
                 variant="outlined"
                 fullWidth
                 value={formik.values.name}
-                
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 error={formik.touched.name && Boolean(formik.errors.name)}

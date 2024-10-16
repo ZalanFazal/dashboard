@@ -38,6 +38,7 @@ const Inventory = () => {
                 <TableCell>${item.price}</TableCell>
               </TableRow>
             ))}
+            {/* Changes is madeeee */}
           </TableBody>
         </Table>
       </Paper>
